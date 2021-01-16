@@ -1,1 +1,1 @@
-SELECT * from productmovement
+delete from product 
