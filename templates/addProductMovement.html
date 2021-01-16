@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Add productMovement{% endblock %}
+{% block head %}
+    <h1 style="text-align:center; " class="title" >Add Product Movement</h1>
+
+    <form action="" method="post" name="productMovement-ID" style="text-align:center; font-weight: bold; ">
+      <div class="field">
+        <label for="movementID" class="label">New Product Movement ID</label>
+        <div class="control">
+          <input type="text" name="movementID" class="input" required="required" id="movementID"/>
+        </div>
+      </div> 
+      
+      <p></p> 
+      
+      <div class="field" >
+        <label for="productID" class="label">Product ID</label>
+        <div class="control">
+          <input type="text" name="productID" class="input" id="productID" />
+        </div>
+      </div>
+
+      
+      <p></p> 
+      <div class="field" >
+        <label for="from_location" class="label">from_location</label>
+        <div class="control">
+          <input type="text" name="from_location" class="input" id="from_location" />
+        </div>
+      </div>
+
+      <p></p> 
+      
+      <div class="field" >
+        <label for="to_location" class="label">to_location</label>
+        <div class="control">
+          <input type="text" name="to_location" class="input" id="to_location" />
+        </div>
+      </div>
+
+      <p></p> 
+      
+      <div class="field" >
+        <label for="quantity" class="label">Quantity</label>
+        <div class="control">
+          <input type="text" name="quantity" class="input" id="quantity" />
+        </div> 
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-primary is-small">Add New Product Movement</button>
+        </div>
+      </div>
+    </form>
+{% endblock %}

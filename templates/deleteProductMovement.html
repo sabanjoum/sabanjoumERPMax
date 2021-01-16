@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Delete product{% endblock %}
+{% block head %}
+    <h1 style="text-align:center; " class="title" >Delete Product</h1>
+
+    
+    <form action="" method="POST" name="deleting" style="text-align:center; font-weight: bold; ">
+     
+       
+
+      <p></p>
+      
+      <div class="field" >
+        <label for="movementID" class="label">Movement ID</label>
+        <div class="control">
+          <input type="text" name="movementID" class="input" id="movementID" />
+        </div>
+      </div>
+       
+      <p></p>
+      
+      <div class="field" >
+        <label for="productID" class="label">Product ID</label>
+        <div class="control">
+          <input type="text" name="productID" class="input" id="productID" />
+        </div>
+      </div>
+
+      
+      <div class="field" >
+        <label for="from_location" class="label">from_location</label>
+        <div class="control">
+          <input type="text" name="from_location" class="input" id="from_location" />
+        </div>
+      </div>
+
+      
+      <div class="field" >
+        <label for="to_location" class="label">to_location</label>
+        <div class="control">
+          <input type="text" name="to_location" class="input" id="to_location" />
+        </div>
+      </div>
+
+      
+      <div class="field" >
+        <label for="quantity" class="label">Quantity</label>
+        <div class="control">
+          <input type="text" name="quantity" class="input" id="quantity" />
+        </div> 
+      </div>
+
+      <p></p>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-primary is-small">Delete</button>
+        </div>
+      </div>
+    </form>
+{% endblock %}

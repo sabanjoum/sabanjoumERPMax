@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+
+{% block title %} ERPMAX WELCOME! {% endblock %}
+
+{% block body %}
+ 
+<head>
+    <style>
+        .button {
+            border: none;
+            color: white;
+            padding: 25px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 19px;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button1 {
+            background-color: #bbeedd;
+        }
+
+        .button2 {
+
+            background-color: rosybrown;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #bbeedd;
+        }
+    </style>
+    
+<style>
+  .button {
+      border: none;
+      color: white;
+      padding: 25px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 19px;
+      margin: 4px 2px;
+      cursor: pointer;
+      font-weight: bold;
+  }
+
+  .button1 {
+      background-color: #bbeedd;
+  }
+
+  .button2 {
+
+      background-color: rosybrown;
+  }
+
+  table {
+      
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+  }
+
+  td,
+  th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+  }
+
+  tr:nth-child(even) {
+      background-color: #bbeedd;
+  }
+</style>
+
+<button type="button" class="col md 30 button1" style= "margin-right: 0%;"> 
+  <a href="/" style=" color: black; font-weight: bold; ">
+      Back To Products Home</a></button>
+ 
+</head>
+
+<body>
+
+      
+
+    <div class="container">
+        <div class="field">
+            <div class="col md-12">
+                <div class="jumbotron p-3"> 
+
+                    </div>
+                </div>
+                <p></p>
+                <p></p>
+
+                <form action="" method="post" name="qty" style="text-align:center; font-weight: bold; ">
+                    <div class="field">
+                        <label for="qty" class="label"></label>
+                        <div class="control">
+                            <table class="table table-hover table-striped" style="border: 10px;">
+                  
+                                <tr>
+                                <th>Product ID</th>
+                                <th>Movement ID</th>
+                                <th>From Location</th>
+                                <th>To Location</th>
+                                <th>Quantity</th>
+                                <th>row Created</th>
+                                 
+                                </tr>
+                                {% for row in time %}
+                                <tr>
+                                <td>{{row[0]}}</td>
+
+                                <td>
+                                    {{row[1]}}
+                                </td>
+                                <td>
+                                    {{row[2]}}
+                                </td>
+                                <td>
+                                    {{row[3]}}
+                                </td>
+                                
+                                <td>
+                                    {{row[4]}}
+                                </td>
+                                
+                                <td>
+                                    {{row[5]}}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+
+                        </div>
+                    </div>
+
+                    <p></p>
+            </div>
+            {% endblock %}

@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block title %} ERPMAX WELCOME! {% endblock %}
+
+{% block body %}
+
+<head>
+    <style>
+        .button {
+            border: none;
+            color: white;
+            padding: 25px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 19px;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button1 {
+            background-color: #bbeedd;
+        }
+
+        .button2 {
+
+            background-color: rosybrown;
+        }
+
+        table {
+                    
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em; 
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #bbeedd;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="field">
+            <div class="col md-12">
+                <div class="jumbotron p-3">
+                    <h2>Manage <b>Products </b> </h2>
+                    <button type="button" class="col md 30 button1" style= "margin-right: 0%;"> 
+                        <a href="/addproduct" style=" color: black; font-weight: bold; ">
+                            Add New Product</a></button>
+                            
+                            <button type="button" class="col md 40 button1" style=" margin-right: 0%;">
+                                <a href="/editproduct" style="color: black; font-weight: bold; ">Edit Product</a>
+                            </button>    
+                                <button type="button" class="col md 40 button1" style=" margin-right: 0%;">
+                                        <a href="/deleteproduct" style="color: black; font-weight: bold;">Delete Product</a></button>
+                    <div class="col md-8">
+                    </div>
+                    <p></p>
+
+                    <div class="alert alert-success alert-dismissable" role="alert">
+                        <button type="button" class="col md 40 button2" style="margin-right: 0%; ">
+                            <a href="/viewLocation" style="color: white; ">
+                                View Locations</a> </button>
+
+                                <button type="button" class="col md 40 button2" style="margin-right: 0%; ">
+                            <a href="/addlocation" style="color: white; ">
+                                Add Locations</a> </button>
+
+                        <button type="button" class="col md 30 button2" style=" margin-right: 0%;">
+                            <a href="/editLocation" style="color: white;" >
+                                Edit Location Names</a></button>
+                        <button type="button" class="col md 40 button2" style=" margin-right: 0%;">
+                            <a href="/deleteLocation" style="color: white; ">Delete Location</a>
+                        </button>
+                        <p></p>
+
+                        <div class="alert alert-success alert-dismissable" role="alert">
+                           <p> <button type="button" class="col md 40 button1" style="margin-right: 0%;">
+                                <a href="/viewProductMovements" style="color: black; ">
+                                    Product Movements</a> </button>
+                                </p>
+                            </button>
+                                    
+    
+                    </div>
+                </div>
+                <p></p>
+                <p></p>
+
+                <form action="" method="post" name="qty" style="text-align:center; font-weight: bold; ">
+                    <div class="field">
+                        <label for="qty" class="label"></label>
+                        <div class="control">
+                            <table class="table table-hover table-striped" style="border: 10px;">
+                                <tr>
+                                    <th>Product ID</th>
+                                    <th>Product Name</th>
+                                    <th>Quantity</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Time Created</th> 
+                                </tr>
+                                {% for time in time  %}
+                                {% for row in rows %}
+
+                                <tr>
+                                    <td>{{row[0]}}</td>
+                                    <td>{{row[1]}} </td>
+
+                                    <td>
+                                        {{row[3]}}
+                                    </td>
+                                    <td>
+                                        {{row[2]}}
+                                    </td>
+                                    <td>
+                                        {{time[3]}}
+                                    </td>
+                                    
+                                    <td>
+                                        {{row[4]}}
+                                    </td> 
+                                </tr>
+                                {% endfor %}
+                                {%  endfor %}
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <p></p>
+            </div>
+            {% endblock %}

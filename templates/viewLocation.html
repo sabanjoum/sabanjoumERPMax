@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block title %} ERPMAX WELCOME! {% endblock %}
+
+{% block body %}
+
+<head>
+    <style>
+        .button {
+            border: none;
+            color: white;
+            padding: 25px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 19px;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button1 {
+            background-color: #bbeedd;
+        }
+
+        .button2 {
+
+            background-color: rosybrown;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #bbeedd;
+        }
+    </style>
+    
+<style>
+  .button {
+      border: none;
+      color: white;
+      padding: 25px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 19px;
+      margin: 4px 2px;
+      cursor: pointer;
+      font-weight: bold;
+  }
+
+  .button1 {
+      background-color: #bbeedd;
+  }
+
+  .button2 {
+
+      background-color: rosybrown;
+  }
+
+  table {
+      
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+  }
+
+  td,
+  th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+  }
+
+  tr:nth-child(even) {
+      background-color: #bbeedd;
+  }
+</style>
+
+<button type="button" class="col md 30 button1" style= "margin-right: 0%;"> 
+  <a href="/" style=" color: black; font-weight: bold; ">
+      Back To Products Home</a></button>
+ 
+</head>
+
+<body>
+
+
+    <div class="container">
+ 
+                <p></p>
+
+                <form action="" method="post" name="locations" style="text-align:center; font-weight: bold; ">
+                    <div class="field">
+                        <label for="qty" class="label"></label>
+                        <div class="control">
+                            <table class="table table-hover table-striped" style="border: 10px;">
+                                <tr>
+                                    <th>Locations</th> 
+                                </tr>
+                                {% for row in data %}
+                                <tr>
+                                    <td>{{row[0]}}</td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <p></p>
+            </div>
+            {% endblock %}
